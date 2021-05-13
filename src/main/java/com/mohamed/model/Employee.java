@@ -1,4 +1,4 @@
-package com.mohamed.model;
+package	com.mohamed.model;
 
 import com.mohamed.util.StringValidator;
 
