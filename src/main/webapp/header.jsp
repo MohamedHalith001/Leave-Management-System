@@ -15,9 +15,15 @@
       <li class="nav-item active">
         <a class="nav-link" href="index.jsp">Home <span class="sr-only">(current)</span></a>
       </li>
+      <%
+      String loggedInUsername = (String)session.getAttribute("LOGGEDIN_USERNAME");
+      String role = (String)session.getAttribute("ROLE");
+      if(loggedInUsername!=null && role != null && role.equalsIgnoreCase("admin")){
+      %>
       <li class="nav-item">
         <a class="nav-link" href="listemployees.jsp">Employees</a>
       </li>
+      <% } %>
       <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="#" id="dropdownId" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dropdown</a>
         <div class="dropdown-menu" aria-labelledby="dropdownId">
@@ -26,14 +32,40 @@
         </div>
       </li>
     </ul>
+    <%
+    if(loggedInUsername == null){
+    %>
      <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
       <li class="nav-item active">
-        <a class="nav-link" href="#">Login</a>
+        <a class="nav-link" href="login.jsp">Login</a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="#">Register</a>
       </li>
       </ul>
+   <% }else if(role != null && role.equalsIgnoreCase("employee")){
+	   Employee employee = EmployeeManager.getEmployee(loggedInUsername);
+	   if(employee!=null){
+	%>
+	  <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
+	     <li class="nav-item active">
+	       <a class="nav-link" href="login.jsp">Welcome <%=employee.getName() %></a>
+	     </li>
+	     <li class="nav-item">
+	       <a class="nav-link" href="LogoutServlet">Logout</a>
+	     </li>
+      </ul>
+      <% }
+      }else if(role != null && role.equalsIgnoreCase("admin")){ %>
+      <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
+	     <li class="nav-item active">
+	       <a class="nav-link" href="login.jsp">Welcome Admin</a>
+	     </li>
+	     <li class="nav-item">
+	       <a class="nav-link" href="LogoutServlet">Logout</a>
+	     </li>
+      </ul>
+      <% } %>
       
   </div>
 </nav>
