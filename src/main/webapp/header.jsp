@@ -24,13 +24,11 @@
       <li class="nav-item">
         <a class="nav-link" href="listemployees.jsp">Employees</a>
       </li>
-      <% }else if(loggedInUsername != null && role != null && role.equalsIgnoreCase("employee")){ 
-      %>
+      <%}else if(loggedInUsername != null && role != null && role.equalsIgnoreCase("employee")){%>
       <li class="nav-item">
-        <a class="nav-link" href="viewbalance.jsp?username=<%=loggedInUsername%>">
-        Balance</a>
+        <a class="nav-link" href="viewbalance.jsp">Leave Balance</a>
       </li>
-      <% } %>
+      <%} %>
       <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="#" id="dropdownId" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dropdown</a>
         <div class="dropdown-menu" aria-labelledby="dropdownId">

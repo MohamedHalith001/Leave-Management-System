@@ -1,7 +1,6 @@
 package com.mohamed.service;
 
 import java.util.ArrayList;
-
 import java.util.List;
 
 import com.mohamed.model.Employee;
@@ -33,6 +32,24 @@ public class EmployeeManager {
 	 */
 	public static List<Employee> getEmployeeList() {
 		return employeeList;
+	}
+
+	/**
+	 * This method is used to return a specific employee. Employee username is
+	 * obtained and returns employee with that username.
+	 * 
+	 * @param username
+	 * @return
+	 */
+	public static Employee getEmployee(String username) {
+		Employee getEmployee = null;
+		for (Employee employee : employeeList) {
+			if (employee.getUsername().equals(username)) {
+				getEmployee = employee;
+				break;
+			}
+		}
+		return getEmployee;
 	}
 
 }

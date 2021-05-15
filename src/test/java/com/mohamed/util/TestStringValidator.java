@@ -1,11 +1,11 @@
-package com.mohamed.util;
+package in.mohamedhalith.util;
 
 import static org.junit.Assert.*;
 
 import org.junit.Test;
 
 public class TestStringValidator {
-	
+
 	/**
 	 * Test cases for isValidStringMethod
 	 */
@@ -15,19 +15,21 @@ public class TestStringValidator {
 		boolean result = StringValidator.isValidString(word);
 		assertFalse(result);
 	}
+
 	@Test
 	public void testIsValidStringWithWhiteSpaces() {
 		String word = "   ";
 		boolean result = StringValidator.isValidString(word);
 		assertFalse(result);
 	}
+
 	@Test
 	public void testIsValidStringWithValidString() {
 		String word = "mohamed";
 		boolean result = StringValidator.isValidString(word);
 		assertTrue(result);
 	}
-	
+
 	/**
 	 * Test cases for isValidPassword method
 	 */
