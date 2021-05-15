@@ -3,6 +3,7 @@
 <link rel="stylesheet" href="assets/css/bootstrap.min.css">
 <link rel="stylesheet" href="assets/css/fontawesome.min.css">
 <link rel="stylesheet" href="assets/css/style.css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
 <header>
 <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
   <a class="navbar-brand" href="index.jsp">Leave Management System</a>
@@ -22,6 +23,12 @@
       %>
       <li class="nav-item">
         <a class="nav-link" href="listemployees.jsp">Employees</a>
+      </li>
+      <% }else if(loggedInUsername != null && role != null && role.equalsIgnoreCase("employee")){ 
+      %>
+      <li class="nav-item">
+        <a class="nav-link" href="viewbalance.jsp?username=<%=loggedInUsername%>">
+        Balance</a>
       </li>
       <% } %>
       <li class="nav-item dropdown">

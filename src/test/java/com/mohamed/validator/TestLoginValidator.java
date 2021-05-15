@@ -1,4 +1,4 @@
-package in.mohamedhalith.validator;
+package com.mohamed.validator;
 
 import static org.junit.Assert.*;
 
