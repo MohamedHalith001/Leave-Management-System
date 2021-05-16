@@ -35,11 +35,13 @@ public class StringValidator {
 		}
 		return valid;
 	}
+	
 	/**
-	 * This method is used to validate the given username and returns true if it matches the required
-	 * pattern.
+	 * This method is used to validate the given username and returns true if it
+	 * matches the required pattern.
 	 * 
 	 * Returns true for a username with 7 or more alphanumeric characters.
+	 * 
 	 * @param username
 	 * @return boolean
 	 */

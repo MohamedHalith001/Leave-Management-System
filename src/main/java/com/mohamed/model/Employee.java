@@ -1,4 +1,4 @@
-package	com.mohamed.model;
+package com.mohamed.model;
 
 import com.mohamed.util.StringValidator;
 
@@ -100,7 +100,7 @@ public class Employee {
 	}
 
 	public String toString() {
-		return "Employee [Name" + name + "Id" + id + "SickLeave" + sickLeave + "Casual Leave" + casualLeave
-				+ "EarnedLeave" + earnedLeave + "]";
+		return "Employee [Name " + name + "Id " + id + "Sick Leave " + sickLeave + "Casual Leave " + casualLeave
+				+ "Earned Leave" + earnedLeave + "]";
 	}
 }
