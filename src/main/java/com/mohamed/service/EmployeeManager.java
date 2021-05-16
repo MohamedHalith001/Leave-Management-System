@@ -19,7 +19,7 @@ public class EmployeeManager {
 		employee1.setPassword("2627moha");
 		employeeList.add(employee1);
 
-		Employee employee2 = new Employee("Halith", 2728);
+		Employee employee2 = new Employee("Halith", 2628);
 		employee2.setUsername("hali2628");
 		employee2.setPassword("2628hali");
 		employeeList.add(employee2);
