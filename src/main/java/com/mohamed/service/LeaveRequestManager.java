@@ -1,5 +1,6 @@
 package com.mohamed.service;
 
+import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -54,6 +55,7 @@ public class LeaveRequestManager {
 				break;
 			}
 			leaveRequest.setLeaveId(requestList.size() + 1);
+			leaveRequest.setAppliedTime(LocalDateTime.now());
 			requestList.add(leaveRequest);
 		} catch (Exception e) {
 			message = "No employee found with given details";

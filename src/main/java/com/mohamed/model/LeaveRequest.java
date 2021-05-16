@@ -1,6 +1,7 @@
 package com.mohamed.model;
 
 import java.time.LocalDate;
+import java.time.LocalDateTime;
 
 import com.mohamed.util.DateValidator;
 import com.mohamed.util.StringValidator;
@@ -13,6 +14,7 @@ public class LeaveRequest {
 	private LocalDate toDate;
 	private String type;
 	private String reason;
+	private LocalDateTime appliedTime;
 
 	public int getLeaveId() {
 		return leaveId;
@@ -90,8 +92,17 @@ public class LeaveRequest {
 
 	@Override
 	public String toString() {
-		return "LeaveRequest [S.No " + leaveId + " Name= " + name + ", Employee Id= " + employeeId + ", From Date= "
-				+ fromDate + ", To Date= " + toDate + ", Type= " + type + ", Reason= " + reason + "]";
+		return "LeaveRequest [S.No " + leaveId + " Name= " + name + ", Employee Id= " + employeeId 
+				+ ", From Date= "+ fromDate + ", To Date= " + toDate + ", Type= " + type 
+				+ ", Reason= " + reason +" Applied at"+ appliedTime + "]";
+	}
+
+	public LocalDateTime getAppliedTime() {
+		return appliedTime;
+	}
+
+	public void setAppliedTime(LocalDateTime appliedTime) {
+		this.appliedTime = appliedTime;
 	}
 
 }
