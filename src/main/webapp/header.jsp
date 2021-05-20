@@ -28,6 +28,9 @@
       <li class="nav-item">
         <a class="nav-link" href="viewbalance.jsp">Leave Balance</a>
       </li>
+      <li class="nav-item">
+        <a class="nav-link" href="applyleave.jsp">Apply for Leave</a>
+      </li>
       <%} %>
       <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="#" id="dropdownId" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dropdown</a>

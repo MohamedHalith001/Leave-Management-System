@@ -1,4 +1,4 @@
-package in.mohamedhalith.util;
+package com.mohamed.util;
 
 import static org.junit.Assert.*;
 

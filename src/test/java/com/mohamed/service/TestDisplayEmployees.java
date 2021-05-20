@@ -1,4 +1,4 @@
-package in.mohamedhalith.service;
+package com.mohamed.service;
 
 import static org.junit.Assert.*;
 
@@ -6,8 +6,8 @@ import java.util.List;
 
 import org.junit.Test;
 
-import in.mohamedhalith.model.Employee;
-import in.mohamedhalith.service.EmployeeManager;
+import com.mohamed.model.Employee;
+import com.mohamed.service.EmployeeManager;
 
 public class TestDisplayEmployees {
 
@@ -29,7 +29,7 @@ public class TestDisplayEmployees {
 	}
 
 	@Test
-	public void testGetEmployeeWithSecondEployee() {
+	public void testGetEmployeeWithSecondEmployee() {
 		String username = "hali2628";
 		Employee employee = EmployeeManager.getEmployee(username);
 		assertEquals("Halith", employee.getName());

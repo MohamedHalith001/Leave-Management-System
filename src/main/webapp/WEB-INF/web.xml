@@ -4,4 +4,14 @@
 
 <web-app>
   <display-name>Archetype Created Web Application</display-name>
+  <servlet>
+  	<servlet-name>ApplyLeaveServlet</servlet-name>
+  	<display-name>ApplyLeaveServlet</display-name>
+  	<description></description>
+  	<servlet-class>com.mohamed.servlet.ApplyLeaveServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>ApplyLeaveServlet</servlet-name>
+  	<url-pattern>/ApplyLeaveServlet</url-pattern>
+  </servlet-mapping>
 </web-app>

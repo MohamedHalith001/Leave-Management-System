@@ -16,12 +16,13 @@ public class StringValidator {
 		}
 		return valid;
 	}
-	
+
 	/**
-	 * This method is used to validate the given password and return true if it satifies the 
-	 * regular expression.
+	 * This method is used to validate the given password and return true if it
+	 * satifies the regular expression.
 	 * 
 	 * Return true for a password with 8 or more alphanumeric characters.
+	 * 
 	 * @param password
 	 * @return boolean
 	 */
@@ -35,7 +36,7 @@ public class StringValidator {
 		}
 		return valid;
 	}
-	
+
 	/**
 	 * This method is used to validate the given username and returns true if it
 	 * matches the required pattern.
